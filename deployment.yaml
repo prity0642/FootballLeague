@@ -27,6 +27,7 @@ metadata:
 spec:
   selector:
     app: football
+  type: NodePort
   ports:
     - protocol: TCP
       port: 8081
