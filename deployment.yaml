@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: football
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: football
+  template:
+    metadata:
+      labels:
+        app: football
+    spec:
+      containers:
+      - name: football-app
+        image: footballleague:v1
+        ports:
+        - containerPort: 8081
